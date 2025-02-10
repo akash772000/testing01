@@ -1,149 +1,122 @@
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Oswald',sans-serif;
 }
-section,.row{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+html{
+    h1{
+        font-size: 200%;
+    }
+    p{
+       font-size: 100%;
 
+    }
+    a{
+        font-size: 100%;
+
+    }
 }
 img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
     display: block;
 }
-a{
-    text-decoration: none;
-    
-}
 .section_padding{
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 .common_padding{
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
-.container{
-    max-width: 1300px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
+.container {
+   max-width: 1140px;
+   margin: 0 auto;
+   width: 100%;
+   padding: 15px 15px;
+   display: flex;
+   border: 2px solid red;
+   flex-wrap: wrap;
+   /* height: 500px; */
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+
+ 
 }
-nav{
-    background-color: #303030;
-    padding-top: 10px;
-    padding-bottom: 10px;
+.box {
+    background-color: lightblue;
+    padding: 20px;
+   
+  width: 23%; /* Default: 4 boxes per row */
+  /* height: 25%; */
+  /* display: flex;
+  flex-direction: column; */
+  /* justify-content: start; */
+  /* align-items: start; */
+
+
+    border: 1px solid black;
+   
 }
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.box h1{
+    margin-bottom: 10px;
 }
-.navlist ul{
-    display: flex;
-    list-style: none;
+.box p{
+    margin-bottom: 10px;
 }
-.navlist ul li{
-    margin: 0 30px;
-}
-.navlist ul li a{
-    color: white;
-    font-size: 25px;
-    font-family: 'Oswald',sans-serif;
-}
-.navbar .icon{
-    color:white;
-    font-size: 25px;
+.box a{
+    padding: 5px 10px;
+    background-color: gray;
+    margin-bottom: 10px;
 }
 
-.banner{
-    height: 100vh;
-    background-image: url("../images/banner_img.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* background-color: rebeccapurple; */
-    justify-content: end;
+/* Responsive Design for Screens 767px and Below */
+@media (max-width: 767px) {
+    /* .container{
+        align-content: center;
+    } */
+    .box {
+        width: 45%; /* 2 boxes per row */
+        
+       
+       
+    }
+    html{
+    h1{
+        font-size: 100%;
+    }
+    p{
+       font-size: 50%;
+
+    }
+    a{
+        font-size: 50%;
+
+    }
+}
+}
+@media (max-width: 595px) {
+    .section_padding{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .box figure,.box .txt{
+       padding: 10px;
+    }
+    .box {
+        display: flex;
+      
+        width: 100%; /* 2 boxes per row */
+    }
+}
+@media (max-width: 320px) {
+    .box {
+        flex-direction: column;
+      
+        width: 100%; /* 2 boxes per row */
+    }
     
-}
-
-
-    
-.banner_main{
-    width: 50%;
-}
-.banner_main h1{
-    margin-top: 30px;
-    font-size: 50px;
-    color: white;
-    font-family: 'Oswald',sans-serif;
-}
-.banner_main p{
-    margin-top: 30px;
-    color: white;
-    font-family: 'Oswald',sans-serif;
-    font-size: 25px;
-
-}
-.banner_main a{
-    display: inline-block;
-    margin-top: 30px;
-    color: white;
-    background-color: #e8631c;
-    font-size: 25px;
-    padding: 25px 40px;
-
-}
-
-
-.dance_tour{
-    background-color: #e8631c;
-}
-.dance_tour .heading{
-    width: 50%;
-    text-align: center;
-
-}
-.dance_tour .heading h2{
-    font-size: 40px;
-    color: white;
-    
-}
-.dance_tour .heading p{
-    font-size: 25px;
-    margin-top: 30px;
-    color: white;
-}
-.dance_tour .dance_card{
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0% 5%;
-    /* border: 2px solid black; */
-
-}
-.dance_tour .dance_card .card{
-    width: 33.33%;
-    /* border: 2px solid green; */
-}
-.dance_tour .dance_card .card .card_heading{
-  background-color: #303030;
-  padding: 25px 40px;
-}
-.dance_tour .dance_card .card .card_heading p{
- text-align: center;
-}
-.dance_tour .dance_card .card .card_heading p:nth-child(1){
-    font-size: 35px;
-    color: white;
-}
-.dance_tour .dance_card .card .card_heading p:nth-child(2){
-   font-size: 20px;
-   color: white;
 }
